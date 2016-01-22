@@ -3,6 +3,7 @@
   <head>
     <title>Bawls Deep Robotics</title>
     <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome-4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,200' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
@@ -12,14 +13,11 @@
     <nav>
       <div class="container clearfix">
         <div class="nav-left">
-          <a href="#"><span class="nav-front"><!--red--><span class="under">C</span></span> Robotics</a>
+          <a href="index.html"><span class="nav-front"><!--red--><span class="under">C</span></span> Robotics</a>
         </div>
 
         <div class="nav-right">
-          <a href="home.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="robots.html">Robots</a>
-          <a href="contact.html">Contact</a>
+          <a href="#"><i class="fa fa-bars"></i> Menu</a>
         </div>
       </div>
     </nav>
@@ -31,6 +29,17 @@
         </div>
       </div>
     </div>
+
+    <nav id="menu">
+      <button class="menu_close">&larr; Close Menu</button>
+      <ul class="menu_items">
+        <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
+        <li class="menu_item"><a class="menu_link" href="#">About</a></li>
+        <li class="menu_item"><a class="menu_link" href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="mask" class="mask"></div>
 
     <!--<div class="container home-content">
       <h1>We make underwater <span class="dildo">dildos</span> for people named Hanna<span class="h">h</span></h1>
