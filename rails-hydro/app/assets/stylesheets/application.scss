@@ -1,0 +1,148 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ * require_tree .
+ * require_self
+ */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/*
+  =====================================
+  Baseline CSS
+  =====================================
+*/
+
+h1,h2,h3,h4,h5,h6,p,a,label,input {
+  font-family: 'Raleway', sans-serif;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* clearfix */
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+/*
+  =====================================
+  Navigation Bar
+  =====================================
+*/
+
+nav {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #d1d1d3;
+}
+
+nav .nav-left a {
+  float: left;
+  font-size: 36px;
+  color: darkslategrey;
+}
+
+nav .nav-front {
+  color: crimson;
+}
+
+nav .nav-front .under {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+nav .nav-right {
+  margin-top: 6px;
+}
+
+nav .nav-right a {
+  float: right;
+  color: #585858;
+  font-size: 24px;
+  padding: 0 0 0 35px;
+  text-align: right;
+  transition: color 0.3s linear; /* vendorless fallback */
+  -o-transition: color 0.3s linear; /* opera */
+  -ms-transition: color 0.3s linear; /* IE 10 */
+  -moz-transition: color 0.3s linear; /* Firefox */
+  -webkit-transition: color 0.3s linear; /*safari and chrome */
+}
+
+nav a:hover,
+nav a:active,
+nav a:visited,
+nav a:focus {
+  text-decoration: none;
+}
+
+nav .nav-right a:hover {
+  text-decoration: none;
+  color: #141414;
+}
+
+/*
+  =====================================
+  Form CSS
+  =====================================
+*/
+
+ .form_header {
+   text-align: center;
+   font-size: 22px;
+ }
+
+ .form_title {
+   display: block;
+   font-size: 12px;
+   font-weight: 700;
+ }
+
+ .form input {
+   border-radius: 0;
+   border: 1px solid #ddd;
+   padding: 4px;
+   display: block;
+   margin: 4px;
+   width: 400px;
+ }
+
+ .form input:active,
+ .form input:focus {
+   border-color: #24c9fe;
+   box-shadow: 0 0 5px #24c9fe;
+ }
+
+ .form input[type=submit] {
+   margin-top: 20px;
+ }
+
+ .wrapper {
+   width: 400px;
+   margin: 0 auto;
+ }

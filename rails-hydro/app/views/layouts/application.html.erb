@@ -5,10 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,200' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-<%= yield %>
+  <%= render "layouts/header" %>
+  <%= yield %>
 
 </body>
 </html>
