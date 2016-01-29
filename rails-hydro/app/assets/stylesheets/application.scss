@@ -64,7 +64,7 @@ nav {
 
 nav .nav-left a {
   float: left;
-  font-size: 36px;
+  font-size: 32px;
   color: darkslategrey;
 }
 
@@ -78,13 +78,13 @@ nav .nav-front .under {
 }
 
 nav .nav-right {
-  margin-top: 6px;
+  margin-top: 9px;
 }
 
 nav .nav-right a {
   float: right;
   color: #585858;
-  font-size: 24px;
+  font-size: 20px;
   padding: 0 0 0 35px;
   text-align: right;
   transition: color 0.3s linear; /* vendorless fallback */
@@ -106,6 +106,11 @@ nav .nav-right a:hover {
   color: #141414;
 }
 
+nav .nav-small a {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
 /*
   =====================================
   Form CSS
@@ -123,6 +128,12 @@ nav .nav-right a:hover {
    font-weight: 700;
  }
 
+ .checkbox_form {
+   display: inline-block;
+   line-height: 21px;
+   vertical-align: top;
+ }
+
  .form input {
    border-radius: 0;
    border: 1px solid #ddd;
@@ -131,6 +142,12 @@ nav .nav-right a:hover {
    margin: 4px;
    width: 400px;
  }
+
+.form input[type="checkbox"] {
+  padding-top: 7px;
+  display: inline;
+  width: auto;
+}
 
  .form input:active,
  .form input:focus {
