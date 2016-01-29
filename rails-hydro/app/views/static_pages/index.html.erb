@@ -1,8 +1,38 @@
+<div class="home-tron">
+  <div class="layover">
+    <div class="container">
+      <div class="tron-text">
+        <h3>World Class Douche-botics</h3>
+        <h4><%= link_to "Meet the team", users_path %></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
-  <h1>Index</h1>
+  <div class="col-md-8">
+    <h3>About redC robotics</h3>
+    <p>RedC Robotics was founded by our glorious and fearless leader, William
+      Robert David (The Douch&eacute;) Null (I know, 5 names? WTF). RedC works
+      with the Hydrosystems Laboratory at the University of Illinois at
+      Urbana-Champaign to build the best damn robots you've ever seen! Our
+      latest creation, dubbed: "Thane Kaleel", doesn't actually go underwater
+      due to its fear of liquid but through our world class parallel processing
+      and computation analytics technology, we will overcome this issue and
+      bring Thane Kaleel's to your very own home. Scary!</p>
+  </div>
+
+  <div class="col-md-4">
+    <h3>News</h3>
+  </div>
+</div>
+
+<div class="container">
   <h3>Temporary Links</h3>
   <ul>
     <li><%= link_to "Sign Up", signup_path %></li>
     <li><%= link_to "Login", login_path %></li>
+    <li><%= link_to "Log Out", logout_path, method: "delete" %></li>
+    <li><%= link_to "Users", users_path %></li>
   </ul>
 </div>

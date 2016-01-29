@@ -63,6 +63,7 @@ nav {
 }
 
 nav .nav-left a {
+  font-family: 'Consolas', monospace;
   float: left;
   font-size: 32px;
   color: darkslategrey;
@@ -162,4 +163,74 @@ nav .nav-small a {
  .wrapper {
    width: 400px;
    margin: 0 auto;
+ }
+
+ /*
+   =====================================
+   Homepage
+   =====================================
+ */
+
+ .home-content {
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ .home-content h1 {
+   display: block;
+   margin-top: 120px;
+   font-family: 'Gloria Hallelujah', cursive;
+   font-size: 72px;
+   text-align: center;
+
+ }
+
+ .home-content small {
+   font-size: 8px;
+ }
+
+ .home-content .dildo,
+ .home-content .h {
+   color: #d63829;
+ }
+
+ /* Tron */
+
+ .home-tron {
+   background-image: image-url('board_faded.jpg');
+   background-size: cover;
+   height: calc(100vh - 46px);
+ }
+
+ .layover {
+   background-color: rgba(30, 0, 0, 0.58);
+   width: 100%;
+   height: 100%;
+ }
+
+ .tron-text h3,
+ .tron-text h4 {
+   display: block;
+   margin: auto;
+   text-align: center;
+   color: white;
+ }
+
+ .tron-text h3 {
+   margin-top: 20vh;
+   font-size: 72px;
+ }
+
+ .tron-text h4 a {
+   margin-top: 50px;
+   padding: 20px;
+   color: white;
+   display: inline-block;
+   background-color: crimson;
+   font-size: 18px;
+   transition: 0.2s;
+ }
+
+ .tron-text h4 a:hover {
+   background-color: black;
  }

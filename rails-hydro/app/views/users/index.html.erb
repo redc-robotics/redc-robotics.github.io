@@ -1,7 +1,8 @@
 <div class="container">
   <% if logged_in? %>
     <% @users.each do |user| %>
-      <b><%= user.first_name %> <%= user.last_name %></b>
+      <b><%= link_to "#{user.first_name} #{user.last_name}", user %></b>
+      <!--<b><%= user.first_name %> <%= user.last_name %></b>-->
       <p><%= user.email %></p>
     <% end %>
   <% else %>

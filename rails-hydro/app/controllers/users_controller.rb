@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.where(member: true)
   end
 
   def new
@@ -9,11 +9,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    puts @user.errors
     if @user.valid?
       @user.save
+      log_in(@user)
       redirect_to @user
     else
-      redirect_to :new
+      render :new
     end
   end
 
