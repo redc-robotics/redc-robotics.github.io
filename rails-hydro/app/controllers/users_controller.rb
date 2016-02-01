@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   def index
+    @users = User.all
+  end
+
+  def members
     @users = User.where(member: true)
   end
 

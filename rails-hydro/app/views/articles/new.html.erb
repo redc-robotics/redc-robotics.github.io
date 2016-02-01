@@ -1,0 +1,24 @@
+<div class="container form form-long wrapper-long">
+  <br />
+  <% if @user %>
+    <% if @user.permission >= 3 %>
+      <%= form_for @article do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <%= f.label :title, class: "form_title" %>
+        <%= f.text_field :title %>
+
+        <%= f.label :content, class: "form_title" %>
+        <%= f.text_area :content, size: "60x10" %>
+
+        <%= f.hidden_field :user_id, value: @user.id %>
+
+        <%= f.submit "Submit Article" %>
+      <% end %>
+    <% else %>
+      <p>You do not have permission to write articles</p>
+    <% end %>
+  <% else %>
+    <p>You must be logged in to write articles</p>
+  <% end %>
+</div>

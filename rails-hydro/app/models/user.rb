@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :articles
+
   attr_accessor :auth_token
   validates :first_name, presence: true
   validates :last_name, presence: true

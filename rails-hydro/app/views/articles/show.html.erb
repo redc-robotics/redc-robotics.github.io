@@ -1,0 +1,7 @@
+<div class="container">
+  <h2><%= @article.title %></h2>
+  <p><%= @article.content %></p>
+  <br />
+  <% author = User.find(@article.user_id) %>
+  <small>Authored by: <%= link_to (author.first_name + " " + author.last_name), author %></small>
+</div>

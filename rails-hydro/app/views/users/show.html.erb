@@ -1,7 +1,16 @@
 <div class="container">
-  <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  <div class="show-head">
+    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+    <% if @user.member %>
+      <h6>Member of the redC Team</h6>
+      <% if @user.role %>
+        <h6><%= @user.role %></h6>
+      <% end %>
+    <% end %>
+  </div>
 
-  <% if @user.first_name == "David" && @user.last_name == "Null" %>
-    <p>Role: Head Douche</p>
-  <% end %>
+  <div class="info">
+    <h3>Information</h3>
+    <p><b>Email:</b> <%= @user.email %></p>
+  </div>
 </div>
