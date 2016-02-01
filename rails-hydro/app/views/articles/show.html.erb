@@ -4,4 +4,7 @@
   <br />
   <% author = User.find(@article.user_id) %>
   <small>Authored by: <%= link_to (author.first_name + " " + author.last_name), author %></small>
+  <% if current_user.permission >= 5 || current_user.id == author.id %>
+    <small><%= link_to " | Edit", edit_article_path(@article) %></small>
+  <% end %>
 </div>

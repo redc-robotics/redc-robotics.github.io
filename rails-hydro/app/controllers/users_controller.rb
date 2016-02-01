@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def members
-    @users = User.where(member: true)
+    @users = User.where(member: true).order(permission: :desc).order(first_name: :asc)
   end
 
   def new
