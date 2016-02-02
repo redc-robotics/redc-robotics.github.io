@@ -1,19 +1,22 @@
-<div class="container form form-long wrapper-long">
+<div class="container">
   <br />
+  <% @user = current_user %>
   <% if @user %>
     <% if @user.permission >= 3 %>
       <%= form_for @article do |f| %>
-        <%= render 'shared/error_messages' %>
+        <div class="form form-long wrapper-long">
+          <%= render 'shared/error_messages' %>
 
-        <%= f.label :title, class: "form_title" %>
-        <%= f.text_field :title %>
+          <%= f.label :title, class: "form_title" %>
+          <%= f.text_field :title %>
 
-        <%= f.label :content, class: "form_title" %>
-        <%= f.text_area :content, size: "60x10" %>
+          <%= f.label :content, class: "form_title" %>
+          <%= f.text_area :content, size: "60x10" %>
 
-        <%= f.hidden_field :user_id, value: @user.id %>
+          <%= f.hidden_field :user_id, value: @user.id %>
 
-        <%= f.submit "Submit Article" %>
+          <%= f.submit "Submit Article" %>
+        </div>
       <% end %>
     <% else %>
       <p>You do not have permission to write articles</p>

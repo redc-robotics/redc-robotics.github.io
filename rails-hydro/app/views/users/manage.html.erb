@@ -1,0 +1,24 @@
+<div class="wrapper form">
+  <h1 class="form_header">Manage</h1>
+
+  <%= form_for @user do |f| %>
+    <%= render 'shared/error_messages' %>
+
+    <%= f.label :first_name, class: "form_title" %>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
+
+    <%= f.label :last_name, class: "form_title" %>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
+
+    <%= f.label :email, class: "form_title" %>
+    <%= f.email_field :email, placeholder: "Email" %>
+
+    <%= f.label :password, class: "form_title" %>
+    <%= f.password_field :password, placeholder: "Password" %>
+
+    <%= f.label :password_confirmation, class: "form_title" %>
+    <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+
+    <%= f.submit "Create Account" %>
+  <% end %>
+</div>

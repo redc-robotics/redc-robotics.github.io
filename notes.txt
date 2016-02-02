@@ -1,0 +1,5 @@
+Permissions:
+5 - Admin
+4 - Moderator
+3 - Writer
+2 - Member

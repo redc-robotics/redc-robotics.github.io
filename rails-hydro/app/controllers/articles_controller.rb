@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   def new
-    @user = current_user
     @article = Article.new
   end
 

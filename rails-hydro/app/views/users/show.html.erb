@@ -13,4 +13,8 @@
     <h3>Information</h3>
     <p><b>Email:</b> <%= @user.email %></p>
   </div>
+
+  <% if current_user && (current_user.id == @user.id || current_user.permission >= 4) %>
+    <small><%= link_to "Manage", manage_path(@user) %></small>
+  <% end %>
 </div>

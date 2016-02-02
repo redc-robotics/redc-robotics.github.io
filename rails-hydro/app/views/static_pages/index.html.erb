@@ -23,7 +23,7 @@
   <div class="col-md-4">
     <h3><b>Recent Articles</b></h3>
     <% @articles.each do |f| %>
-      <h4 class="article-title"><b><%= link_to f.title, '#' %></a></b></h4>
+      <h4 class="article-title"><b><%= link_to f.title, f %></a></b></h4>
       <div class="article-content">
         <% if f.content.length > 200 %>
           <% end_ind = f.content[0...200].rindex(' ') %>

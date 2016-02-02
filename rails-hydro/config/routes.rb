@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   get 'members' => 'users#members'
+  get 'users/manage/:id' => 'users#manage', as: 'manage'
   resources :users
 
   resources :articles
