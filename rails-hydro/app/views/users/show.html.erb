@@ -1,6 +1,6 @@
 <div class="container">
   <div class="show-head">
-    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+    <h1><%= @user.first_name %> <%= ('"' + @user.nickname + '"') if @user.nickname && !@user.nickname.empty? %> <%= @user.last_name %></h1>
     <% if @user.member %>
       <h6>Member of the redC Team</h6>
       <% if @user.role %>
@@ -14,7 +14,8 @@
     <p><b>Email:</b> <%= @user.email %></p>
   </div>
 
-  <% if current_user && (current_user.id == @user.id || current_user.permission >= 4) %>
+  <!-- current_user && (current_user.id == @user.id || -->
+  <% if current_user && current_user.permission >= 4 %>
     <small><%= link_to "Manage", manage_path(@user) %></small>
   <% end %>
 </div>

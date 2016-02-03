@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'members' => 'users#members'
   get 'users/manage/:id' => 'users#manage', as: 'manage'
+  patch 'users/override/:id' => 'users#override', as: 'override'
   resources :users
 
   resources :articles

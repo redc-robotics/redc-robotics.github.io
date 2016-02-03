@@ -1,17 +1,29 @@
 <div class="wrapper form">
   <h1 class="form_header">Manage</h1>
 
-  <%= form_for @user do |f| %>
+  <%= form_for @user, :url => override_path(@user) do |f| %>
     <%= render 'shared/error_messages' %>
 
     <%= f.label :first_name, class: "form_title" %>
     <%= f.text_field :first_name, placeholder: "First Name" %>
 
+    <%= f.label :nickname, class: "form_title" %>
+    <%= f.text_field :nickname, placeholder: "Nickname" %>
+
     <%= f.label :last_name, class: "form_title" %>
     <%= f.text_field :last_name, placeholder: "Last Name" %>
 
     <%= f.label :email, class: "form_title" %>
-    <%= f.email_field :email, placeholder: "Email" %>
+    <%= f.email_field :email, placeholder: "Email", readonly: true %>
+
+    <%= f.label :member, class: "form_title" %>
+    <%= f.select :member, [['True', 'true'], ['False', 'false']] %>
+
+    <%= f.label :permission, class: "form_title" %>
+    <%= f.select :permission, ['Administrator', 'Moderator', 'Writer', 'User'] %>
+
+    <%= f.label :role, class: "form_title" %>
+    <%= f.text_field :role, placeholder: "Role" %>
 
     <%= f.label :password, class: "form_title" %>
     <%= f.password_field :password, placeholder: "Password" %>
@@ -19,6 +31,6 @@
     <%= f.label :password_confirmation, class: "form_title" %>
     <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
 
-    <%= f.submit "Create Account" %>
+    <%= f.submit "Update Information" %>
   <% end %>
 </div>

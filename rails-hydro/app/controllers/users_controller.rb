@@ -37,6 +37,12 @@ class UsersController < ApplicationController
   def override
     @user = User.find_by(id: params[:id])
     if @user.update_attributes(super_user_params)
+      if params[:user][:member] == 'true'
+        @user.update_attributes(member: true)
+      else
+        @user.update_attributes(member: false)
+      end
+      @user.update_attributes(nickname: params[:user][:nickname])
       redirect_to @user
     else
       render :edit
@@ -49,7 +55,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    if @user.update_attributes(super_user_params)
+    if @user.update_attributes(user_params)
       redirect_to @user
     else
       render :edit
@@ -63,6 +69,7 @@ class UsersController < ApplicationController
   end
 
   def super_user_params
-    params.require(:user).permit(:first_name, :last_name, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :nickname, :last_name, :role,
+     :password, :password_confirmation)
   end
 end
