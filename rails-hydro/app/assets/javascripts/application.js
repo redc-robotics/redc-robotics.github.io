@@ -16,3 +16,18 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+
+var ready = function() {
+  $("#menu-button").click(function() {
+    $(".black-overlay").fadeTo(1.0, 300);
+    $(".menu-wrapper").animate({right: 0}, 300);
+  });
+
+  $(".black-overlay").click(function() {
+    $(".black-overlay").fadeOut(0);
+    $(".menu-wrapper").animate({right: "-250px"}, 300);
+  })
+};
+
+$(document).on('page:load', ready);
+$(document).ready(ready);

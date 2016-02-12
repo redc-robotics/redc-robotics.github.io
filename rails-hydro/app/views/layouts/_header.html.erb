@@ -5,7 +5,7 @@
     </div>
 
     <div class="nav-right">
-      <a href="#"><i class="fa fa-bars"></i> Menu</a>
+      <a id="menu-button" href="#"><i class="fa fa-bars"></i> Menu</a>
       <div class="nav-small">
         <% if logged_in? %>
           <%= link_to "Logged in as #{current_user.first_name} #{current_user.last_name}", @current_user %>

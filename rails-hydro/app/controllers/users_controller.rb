@@ -31,6 +31,9 @@ class UsersController < ApplicationController
   end
 
   def manage
+    if current_user.permission < 5
+      redirect_to root_path
+    end
     @user = User.find_by(id: params[:id])
   end
 
@@ -46,6 +49,19 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render :edit
+    end
+  end
+
+  def edit_about
+    @user = User.find_by(id: params[:id])
+  end
+
+  def update_about
+    @user = User.find_by(id: params[:id])
+    if @user.update_attributes(about: params[user][about])
+      redirect_to @user
+    else
+      render :edit_about
     end
   end
 

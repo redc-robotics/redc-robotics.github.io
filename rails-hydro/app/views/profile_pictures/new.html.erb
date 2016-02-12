@@ -1,0 +1,12 @@
+<div class="container wrapper form">
+  <h1>Upload Photo</h1>
+
+  <%= form_for @profile_picture do |f| %>
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image, class: 'upload'%>
+    </div>
+
+    <%= f.submit 'Upload' %>
+  <% end %>
+</div>

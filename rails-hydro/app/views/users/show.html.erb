@@ -9,7 +9,22 @@
     <% end %>
   </div>
 
-  <div class="info">
+  <div class="col-md-8">
+    <!--<div class="profile-pic">
+      <% if @user.profile_picture %>
+        <%= link_to image_tag(@user.profile_picture.image.url(:profile)), @user.profile_picture.image.url %>
+      <% end %>
+    </div>-->
+
+    <div class="user-about">
+      <% if @user.about %>
+        <h3>About</h3>
+        <p><%= @user.about %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="info col-md-4">
     <h3>Information</h3>
     <p><b>Email:</b> <%= @user.email %></p>
   </div>

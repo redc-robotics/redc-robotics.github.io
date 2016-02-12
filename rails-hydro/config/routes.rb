@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'users/manage/:id' => 'users#manage', as: 'manage'
   patch 'users/override/:id' => 'users#override', as: 'override'
   resources :users
+  resources :profile_pictures, only: [:new, :create]
 
   resources :articles
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :articles
+  has_one :profile_picture
 
   attr_accessor :auth_token
   validates :first_name, presence: true
