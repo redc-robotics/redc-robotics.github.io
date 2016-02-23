@@ -11,6 +11,7 @@
     <% end %>
 
     <% if logged_in? && current_user.permission > 3 %>
+      <h4>Administration Links</h4>
       <li><%= link_to "Users", users_path %></li>
       <li><%= link_to "Write new article", new_article_path %></li>
     <% end %>

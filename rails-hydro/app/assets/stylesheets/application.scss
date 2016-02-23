@@ -79,6 +79,19 @@ body {
   list-style: none;
 }
 
+.menu-wrapper a {
+  color: #636363;
+}
+
+.menu-wrapper a:hover {
+  color: #000;
+}
+
+.menu-wrapper h4 {
+  margin-top: 10px;
+  display: inline-block;
+}
+
 .menu-strip {
   background-color: #a42318;
   width: 6px;
