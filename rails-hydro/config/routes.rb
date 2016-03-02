@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#index'
+  get 'dashboard' => 'static_pages#dashboard', as: 'dashboard'
 
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'

@@ -206,10 +206,32 @@ body {
 .jumbotron h1 {
   display: block;
   margin: auto;
-  margin-top: 36vh;
+  margin-top: 29vh;
   font-size: 96px;
   color: white;
   text-align: center;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.jumbotron h4 {
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.jumbotron h4 a {
+  margin-top: 50px;
+  padding: 20px;
+  color: white;
+  display: inline-block;
+  background-color: #B81C1B;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.jumbotron h4 a:hover {
+  background-color: black;
 }
 
 .home-basic {
@@ -241,6 +263,51 @@ body {
   margin-bottom: 30px;
 }
 
+/*
+  =====================================
+  Dashboard
+  =====================================
+*/
+
+.dashboard-wrapper a {
+  display: block;
+}
+
+.dashboard-wrapper .links {
+  border: 1px solid #555;
+  border-radius: 2px;
+  padding: 0px !important;
+
+  .links-list {
+    list-style: none;
+    padding: 5px;
+    margin-bottom: 0px;
+
+    a {
+      color: #838383;
+    }
+
+    a:hover {
+      color: #696969;
+    }
+  }
+
+  .links-head {
+    margin: auto;
+    border-bottom: 1px solid #555;
+    background-color: #555;
+
+    h3 {
+      color: white;
+      margin-top: 0px;
+      padding-top: 10px;
+      font-weight: bold;
+      text-align: center;
+      margin: auto;
+    }
+  }
+}
+
  /*
    =====================================
    User Show page
@@ -253,17 +320,10 @@ body {
 }
 
 .show-head h6 {
+  font-size: 14px;
+  font-weight: 500;
   line-height: 12px;
 }
-
-/*.profile-pic {
-  color: black;
-  float: left;
-  margin-right: 35px;
-  margin-top: 22px;
-  padding: 4px;
-  border: 1px solid #777;
-}*/
 
 .user-about {
   float: left;
