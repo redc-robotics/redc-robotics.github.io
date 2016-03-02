@@ -8,8 +8,8 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,200' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <%= render "shared/menu_bar" %>
   <%= render "layouts/header" %>
+  <%= render "shared/nav_fix" unless @nofix %>
   <%= yield %>
 
 </body>
