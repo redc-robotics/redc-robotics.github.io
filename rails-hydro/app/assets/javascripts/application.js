@@ -11,22 +11,39 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery
-//= require bootstrap-sprockets
 
 var ready = function() {
-  $("#menu-button").click(function() {
-    $(".black-overlay").fadeTo(1.0, 300);
-    $(".menu-wrapper").animate({right: 0}, 300);
-  });
+	var fixcheck = $(".nav-fix");
 
-  $(".black-overlay").click(function() {
-    $(".black-overlay").fadeOut(0);
-    $(".menu-wrapper").animate({right: "-250px"}, 300);
-  })
+	$(document).scroll(function() {
+		scroll_start = $(this).scrollTop();
+		if (fixcheck.length === 0 && scroll_start !== 0) {
+			//$(".nav-custom").css("background-color", "rgba(0,0,0,0.81");
+			$(".nav-custom").addClass("dark-fix");
+		} else if (fixcheck.length == 0) {
+			console.log("Called");
+			$(".nav-custom").removeClass("dark-fix");
+		} else {
+			$(".nav-custom").addClass("dark-fix");
+		}
+	});
+  /*var scroll_start = 0;
+  var startchange = $('#startchange');
+  var offset = startchange.offset();
+  if (startchange.length){
+    $(document).scroll(function() { 
+      scroll_start = $(this).scrollTop();
+      if(scroll_start > offset.top) {
+        $(".navbar-default").css('background-color', '#f0f0f0');
+      } else {
+        $('.navbar-default').css('background-color', 'transparent');
+      }
+    });
+  }*/
 };
 
 $(document).on('page:load', ready);
