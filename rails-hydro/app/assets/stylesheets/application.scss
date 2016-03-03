@@ -113,6 +113,7 @@ body {
 .navbar-brand {
   font-family: 'Consolas', monospace;
   color: white !important;
+  font-size: 25px;
 }
 
 #redc {
@@ -197,7 +198,7 @@ body {
  */
 
 .jumbotron {
-  background-image: url(dsbackmod4.jpg);
+  background-image: url(dsbackmod1.jpg);
   background-size: cover;
   height: 100vh;
   margin-bottom: 0;
@@ -274,6 +275,7 @@ body {
 }
 
 .dashboard-wrapper .links {
+  margin-top: 10px;
   border: 1px solid #555;
   border-radius: 2px;
   padding: 0px !important;
@@ -291,21 +293,90 @@ body {
       color: #696969;
     }
   }
+}
 
-  .links-head {
+.links-head {
+  margin: auto;
+  border-bottom: 1px solid #555;
+  background-color: #555;
+
+  h3 {
+    color: white;
+    margin-top: 0px;
+    padding-top: 10px;
+    font-weight: bold;
+    text-align: center;
     margin: auto;
-    border-bottom: 1px solid #555;
-    background-color: #555;
+  }
+}
+
+.admin-links {
+  margin-top: 10px;
+  height: 100px;
+  border: 1px solid #555;
+}
+
+.manage {
+  margin-top: 10px;
+  height: 100px;
+  border: 1px solid #555;
+}
+
+/*
+  =====================================
+  User Show page
+  =====================================
+*/
+
+.work-tile {
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  margin-bottom: 0;
+
+  h1 {
+    display: inline-block;
+    color: white;
+    text-shadow: 2px 2px 6px #000;
+    margin: 0;
+    margin-top: 16vh;
+    margin-left: 30vh;
+  }
+
+  .tile-about {
+    margin: 0 5vh 0 40vh;
 
     h3 {
+      display: inline-block;
       color: white;
-      margin-top: 0px;
-      padding-top: 10px;
-      font-weight: bold;
-      text-align: center;
-      margin: auto;
+      text-shadow: 2px 2px 4px #000;
+      text-align: left;
+      font-size: 32px;
+
+      a {
+        text-decoration: underline;
+        display: inline-block;
+        margin-left: 10px;
+        color: #c2b7b7;
+      }
+
+      a:hover {
+        color: #999090;
+      }
     }
   }
+}
+
+.work-design {
+  background-image: url(work_head.png);
+}
+
+.work-hardware {
+  background-image: url(dsbackmod4.jpg);
+}
+
+.work-software {
+  background-image: url(prog_tile2.png);
 }
 
  /*

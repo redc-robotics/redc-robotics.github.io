@@ -22,7 +22,6 @@ var ready = function() {
 	$(document).scroll(function() {
 		scroll_start = $(this).scrollTop();
 		if (fixcheck.length === 0 && scroll_start !== 0) {
-			//$(".nav-custom").css("background-color", "rgba(0,0,0,0.81");
 			$(".nav-custom").addClass("dark-fix");
 		} else if (fixcheck.length == 0) {
 			console.log("Called");
@@ -31,20 +30,8 @@ var ready = function() {
 			$(".nav-custom").addClass("dark-fix");
 		}
 	});
-  /*var scroll_start = 0;
-  var startchange = $('#startchange');
-  var offset = startchange.offset();
-  if (startchange.length){
-    $(document).scroll(function() { 
-      scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-        $(".navbar-default").css('background-color', '#f0f0f0');
-      } else {
-        $('.navbar-default').css('background-color', 'transparent');
-      }
-    });
-  }*/
 };
 
 $(document).on('page:load', ready);
 $(document).ready(ready);
+$(document).on("page:restore", ready);

@@ -9,4 +9,8 @@ class StaticPagesController < ApplicationController
   		redirect_to login_path
   	end
   end
+
+  def work
+    @nofix = true
+  end
 end
