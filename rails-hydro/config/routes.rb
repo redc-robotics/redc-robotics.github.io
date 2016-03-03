@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'members' => 'users#members'
   get 'users/manage/:id' => 'users#manage', as: 'manage'
   patch 'users/override/:id' => 'users#override', as: 'override'
+  get 'testmail' => 'users#send_mail'
   resources :users
   resources :profile_pictures, only: [:new, :create]
 

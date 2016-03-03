@@ -78,6 +78,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def send_mail
+    @user = User.find_by(email: "jonathanj.xu@yahoo.com")
+    TeamMailer.single_mail(@user, "Email Subject")
+    redirect_to @user
+  end
+
   private
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email,

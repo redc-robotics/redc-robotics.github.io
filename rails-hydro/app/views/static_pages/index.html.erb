@@ -13,7 +13,7 @@
 
 <div class="container home-info-wrapper">
   <div class="col-md-8">
-    <h2>redC Philosophy</h2>
+    <h2><b>redC Philosophy</b></h2>
 
     <p>
       As I have done more and more research into the area of submersible technology,
@@ -39,9 +39,9 @@
   </div>
 
   <div class="col-md-4">
-    <h3><b>Recent Articles</b></h3>
+    <h2><b>Recent Articles</b></h2>
     <% @articles.each do |f| %>
-      <h4 class="article-title"><b><%= link_to f.title, f %></a></b></h4>
+      <h4 class="article-title"><b><%= link_to f.title, f %></b></h4>
       <div class="article-content">
         <% if f.content.length > 200 %>
           <% end_ind = f.content[0...200].rindex(' ') %>

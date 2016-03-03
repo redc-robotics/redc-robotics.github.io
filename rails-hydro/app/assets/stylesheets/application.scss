@@ -100,14 +100,21 @@ body {
 }
 
 .nav-custom li {
-  padding: 3px 6px 0px 6px;
+  padding: 0px 6px 0px 6px;
   font-family: 'Bebas';
-}
 
-.nav-custom li a {
-  color: white !important;
-  text-decoration: none;
-  font-size: 30px;
+  a {
+    padding-top: 20px;
+    color: white !important;
+    text-decoration: none;
+    font-size: 30px;
+    background-color: inherit;
+    transition: 0.5s;
+  }
+
+  a:hover {
+    background-color: rgba(255, 0, 0, 0.7) !important;
+  }
 }
 
 .navbar-brand {
@@ -236,7 +243,8 @@ body {
 }
 
 .home-basic {
-  background-color: #f2efef;
+  /*background-color: #f2efef;*/
+  background: radial-gradient(circle, #f2efef, #efe4e4); /* Standard syntax */
   margin-bottom: 30px;
 }
 
@@ -262,6 +270,11 @@ body {
 
 .home-info-wrapper {
   margin-bottom: 30px;
+}
+
+.article-title a,
+.article-content {
+  color: #181717;
 }
 
 /*
