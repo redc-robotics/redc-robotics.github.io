@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   get 'dashboard' => 'static_pages#dashboard', as: 'dashboard'
   get 'work' => 'static_pages#work', as: 'work'
+  get 'about' => 'static_pages#about', as: 'about'
 
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'

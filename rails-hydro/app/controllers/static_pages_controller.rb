@@ -4,6 +4,9 @@ class StaticPagesController < ApplicationController
     @nofix = true
   end
 
+  def about
+  end
+
   def dashboard
   	if not logged_in?
   		redirect_to login_path

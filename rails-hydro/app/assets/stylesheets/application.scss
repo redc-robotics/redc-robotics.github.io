@@ -48,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Bebas';
 }
 
-p {
+p,li {
   font-family: 'Montserrat';
 }
 
@@ -71,6 +71,10 @@ a:active {
 /* start commented backslash hack \*/
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
+
+html {
+  overflow-y: scroll;
+}
 
 html, body {
   /*overflow-x: hidden;*/
@@ -411,4 +415,24 @@ body {
 
 .user-about {
   float: left;
+}
+
+/*
+  =====================================
+  About page
+  =====================================
+*/
+
+.about-wrapper {
+  .about-img {
+    float: right;
+    max-width: 40vh;
+    width: 250px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+  }
+
+  .about-text {
+    font-size: 17px;
+  }
 }
