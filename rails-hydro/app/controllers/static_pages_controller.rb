@@ -11,6 +11,7 @@ class StaticPagesController < ApplicationController
   	if not logged_in?
   		redirect_to login_path
   	end
+    @user = current_user
   end
 
   def work

@@ -1,0 +1,23 @@
+<div class="container">
+  <p>You can contact redC robotics by emailing us at <a href="mailto:redcrobotics@gmail.com" target="_top">redcrobotics@gmail.com</a> or by filling in the form below.</p>
+
+  <p>More information about redC robotics's affilliate, the Ven Te Chow Hydrosystems Laboratory can be found <a href="http://vtchl.illinois.edu/">here</a>.</p>
+
+  <br />
+  <br />
+
+  <div class="wrapper form">
+    <%= form_for @contact do |f| %>
+      <%= f.label :email, class: "form_title" %>
+      <%= f.text_field :email %>
+
+      <%= f.label :name, class: "form_title" %>
+      <%= f.text_field :name %>
+
+      <%= f.label :message, class: "form_title" %>
+      <%= f.text_area :message %>
+
+      <%= f.submit "Submit Form" %>
+  <% end %>
+</div>
+</div>

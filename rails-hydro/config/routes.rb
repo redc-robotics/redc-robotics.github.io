@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get 'dashboard' => 'static_pages#dashboard', as: 'dashboard'
   get 'work' => 'static_pages#work', as: 'work'
   get 'about' => 'static_pages#about', as: 'about'
+  get 'contact' => 'contacts#new', as: 'contact'
+  get 'contact' => 'contacts#new', as: 'contacts'
+  post 'contact' => 'contacts#create'
+  get 'contact/messages' => 'contacts#index', as: 'messages'
 
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'

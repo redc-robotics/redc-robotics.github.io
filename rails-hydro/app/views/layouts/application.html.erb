@@ -10,6 +10,9 @@
 <body>
   <%= render "layouts/header" %>
   <%= render "shared/nav_fix" unless @nofix %>
+  <% flash.each do |key, value| %>
+    <div class="container alert alert-<%= key %>"><%= value %></div>
+  <% end %>
   <%= yield %>
 
 </body>

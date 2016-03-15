@@ -1,0 +1,25 @@
+<div class="container">
+  <% if current_user && current_user.permission >= 4 %>
+    <% @messages.each do |message| %>
+      <div class="message-wrapper">
+        <div class="col-md-2">
+          <b><%= message.name %></b>
+        </div>
+
+        <div class="col-md-3">
+          <b><%= message.email %></b>
+        </div>
+
+        <div class="col-md-7">
+          <% if message.message.empty? %>
+            <p><i>No Message</i></p>
+          <% else %>
+            <p><%= message.message %></p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <b>You do not have permissions to view this page</b>
+  <% end %>
+</div>
