@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="col-md-offset-2 col-md-8">
+    <% @articles.each do |f| %>
+      <h4 class="article-title"><b><%= link_to f.title, f %></b></h4>
+      <div class="article-content">
+        <% if f.content.length > 400 %>
+          <% end_ind = f.content[0...400].rindex(' ') %>
+          <p><%= f.content[0...end_ind] + "..." %> <%= link_to "Read More", f %></p>
+        <% else %>
+          <p><%= f.content %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

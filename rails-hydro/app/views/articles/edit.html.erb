@@ -13,8 +13,6 @@
           <%= f.label :content, class: "form_title" %>
           <%= f.text_area :content, size: "60x10" %>
 
-          <%= f.hidden_field :user_id, value: @user.id %>
-
           <%= f.submit "Submit Article" %>
         </div>
       <% end %>

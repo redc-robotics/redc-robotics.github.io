@@ -1,6 +1,7 @@
 <div class="container">
   <h2><%= @article.title %></h2>
-  <p><%= @article.content %></p>
+  <h4><%= @article.created_at.strftime("%m-%d-%Y") %></h4>
+  <p class="article-container"><%= @article.content %></p>
   <br />
   <% author = User.find(@article.user_id) %>
   <small>Authored by: <%= link_to (author.first_name + " " + author.last_name), author %></small>
